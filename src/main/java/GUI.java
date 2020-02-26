@@ -17,7 +17,6 @@ public class GUI extends Application {
     @Override
     public void start(final Stage stage) throws Exception {
 
-        /*
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui.fxml"));
         GridPane gridPane = loader.load();
         Scene scene = new Scene(gridPane);
@@ -27,7 +26,7 @@ public class GUI extends Application {
 
     }
 }
-*/
+
 
         /*
 

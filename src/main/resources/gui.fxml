@@ -29,9 +29,9 @@
       <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
    </columnConstraints>
    <children>
-      <Button alignment="CENTER" mnemonicParsing="false" text="Læge" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-      <Button mnemonicParsing="false" text="Sundhedsprofessionel" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-      <Button mnemonicParsing="false" text="Patient" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <Button fx:id="lægeKnap" alignment="CENTER" mnemonicParsing="false" onAction="#lægeVindue" text="Læge" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Button fx:id="sunhedsprofessionelKnap" mnemonicParsing="false" onAction="#sundhedsprofessionelVindue" text="Sundhedsprofessionel" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Button fx:id="patientKnap" mnemonicParsing="false" onAction="#patientVindue" text="Patient" GridPane.columnIndex="3" GridPane.rowIndex="7" />
       <Label prefWidth="115.0" text="Diagnonomic" GridPane.columnIndex="3" />
    </children>
 </GridPane>
