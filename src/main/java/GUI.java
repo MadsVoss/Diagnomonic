@@ -20,18 +20,18 @@ public class GUI extends Application {
         Button buttonP = new Button("Patient");
         Button buttonL = new Button("Læge");
         Button buttonSP = new Button("Sundhedsprofessionel");
-        Button buttonTilbage = new Button("Tilbage");
+        final Button buttonTilbage = new Button("Tilbage");
 
         //DETTE ER TIL PATIENT KNAPPEN
         buttonP.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    Stage stage2 = new Stage();
+
                     Label labelDiagnomonic = new Label("Diagnomonic");
                     Label labelCPR = new Label("CPR-nr:");
                     TextField textCPR = new TextField ();
                     Button button2 = new Button("Login");
-                    Button buttonTilbage = new Button("Tilbage");
+
 
                     GridPane pane2 = new GridPane();
                     pane2.add(labelDiagnomonic,0,0);
@@ -41,8 +41,8 @@ public class GUI extends Application {
                     pane2.add(buttonTilbage, 0, 1);
 
                     Scene scene2 = new Scene(pane2, 640, 480);
-                    stage2.setScene(scene2);
-                    stage2.show();
+                    stage.setScene(scene2);
+                    stage.show();
                 }
         });
 
@@ -50,14 +50,14 @@ public class GUI extends Application {
         buttonL.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Stage stage2 = new Stage();
+
                 Label labelDiagnomonic = new Label ("Diagnomonic");
                 Label labelBrugernavn = new Label("Brugernavn:");
                 TextField textBrugernavn = new TextField ();
                 Label labelPassword = new Label ("Password:");
                 TextField textPassword = new TextField ();
                 Button button2 = new Button("Login");
-                Button buttonTilbage = new Button("Tilbage");
+
 
 
                 GridPane pane2 = new GridPane();
@@ -71,8 +71,8 @@ public class GUI extends Application {
                 //pane2.setGridLinesVisible(true);
 
                 Scene scene2 = new Scene(pane2, 640, 480);
-                stage2.setScene(scene2);
-                stage2.show();
+                stage.setScene(scene2);
+                stage.show();
             }
         });
 
@@ -80,14 +80,14 @@ public class GUI extends Application {
         buttonSP.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Stage stage2 = new Stage();
+
                 Label labelDiagnomonic = new Label ("Diagnomonic");
                 Label labelBrugernavn = new Label("Brugernavn:");
                 TextField textBrugernavn = new TextField ();
                 Label labelPassword = new Label ("Password:");
                 TextField textPassword = new TextField ();
                 Button button2 = new Button("Login");
-                Button buttonTilbage = new Button("Tilbage");
+
 
                 GridPane pane2 = new GridPane();
                 pane2.add(labelDiagnomonic, 0,0);
@@ -100,8 +100,8 @@ public class GUI extends Application {
                 //pane2.setGridLinesVisible(true);
 
                 Scene scene2 = new Scene(pane2, 640, 480);
-                stage2.setScene(scene2);
-                stage2.show();
+                stage.setScene(scene2);
+                stage.show();
             }
         });
 
