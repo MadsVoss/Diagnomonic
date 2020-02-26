@@ -21,6 +21,17 @@ public class GUI extends Application {
         final Button buttonL = new Button("Læge");
         final Button buttonSP = new Button("Sundhedsprofessionel");
         final Button buttonTilbage = new Button("Tilbage");
+        // HER ER FORSIDEN
+        GridPane pane = new GridPane();
+        pane.add(labelDiagnomonic, 0 ,0 );
+        pane.add(buttonP,3,13); //Row -> //column ^
+        pane.add(buttonL, 1, 14);
+        pane.add(buttonSP,5, 14);
+
+
+        Scene scene = new Scene(pane, 640, 480);
+        stage.setScene(scene);
+        stage.show();
 
         //DETTE ER TIL PATIENT KNAPPEN
         buttonP.setOnAction(new EventHandler<ActionEvent>() {
@@ -125,17 +136,7 @@ public class GUI extends Application {
         });
 
 
-        // HER ER FORSIDEN
-        GridPane pane = new GridPane();
-        pane.add(labelDiagnomonic, 0 ,0 );
-        pane.add(buttonP,3,13); //Row -> //column ^
-        pane.add(buttonL, 1, 14);
-        pane.add(buttonSP,5, 14);
 
-
-        Scene scene = new Scene(pane, 640, 480);
-        stage.setScene(scene);
-        stage.show();
     }
 
 }
