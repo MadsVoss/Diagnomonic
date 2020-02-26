@@ -10,11 +10,28 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
 
 public class GUI extends Application {
 
     @Override
     public void start(final Stage stage) throws Exception {
+
+        /*
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui.fxml"));
+        GridPane gridPane = loader.load();
+        Scene scene = new Scene(gridPane);
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
+}
+*/
+
+        /*
+
+
         // DETTE ER TIL FORSIDEN
         final Label labelDiagnomonic = new Label("Diagnomonic");
         final Button buttonP = new Button("Patient");
@@ -41,6 +58,7 @@ public class GUI extends Application {
                     Label labelCPR = new Label("CPR-nr:");
                     TextField textCPR = new TextField ();
                     Button button2 = new Button("Login");
+
 
 
                     GridPane pane2 = new GridPane();
@@ -140,3 +158,6 @@ public class GUI extends Application {
     }
 
 }
+
+
+*/
