@@ -5,6 +5,7 @@ import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBase;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -19,7 +20,7 @@ public class GUI extends Application {
         Button buttonP = new Button("Patient");
         Button buttonL = new Button("Læge");
         Button buttonSP = new Button("Sundhedsprofessionel");
-        final Button buttonTilbage = new Button("Tilbage");
+        Button buttonTilbage = new Button("Tilbage");
 
         //DETTE ER TIL PATIENT KNAPPEN
         buttonP.setOnAction(new EventHandler<ActionEvent>() {
@@ -30,6 +31,7 @@ public class GUI extends Application {
                     Label labelCPR = new Label("CPR-nr:");
                     TextField textCPR = new TextField ();
                     Button button2 = new Button("Login");
+                    Button buttonTilbage = new Button("Tilbage");
 
                     GridPane pane2 = new GridPane();
                     pane2.add(labelDiagnomonic,0,0);
@@ -39,7 +41,7 @@ public class GUI extends Application {
                     pane2.add(buttonTilbage, 0, 1);
 
                     Scene scene2 = new Scene(pane2, 640, 480);
-                    stage2.setScene(scene);
+                    stage2.setScene(scene2);
                     stage2.show();
                 }
         });
@@ -55,6 +57,7 @@ public class GUI extends Application {
                 Label labelPassword = new Label ("Password:");
                 TextField textPassword = new TextField ();
                 Button button2 = new Button("Login");
+                Button buttonTilbage = new Button("Tilbage");
 
 
                 GridPane pane2 = new GridPane();
@@ -84,6 +87,7 @@ public class GUI extends Application {
                 Label labelPassword = new Label ("Password:");
                 TextField textPassword = new TextField ();
                 Button button2 = new Button("Login");
+                Button buttonTilbage = new Button("Tilbage");
 
                 GridPane pane2 = new GridPane();
                 pane2.add(labelDiagnomonic, 0,0);
@@ -102,6 +106,7 @@ public class GUI extends Application {
         });
 
         //DETTE ER TIL TILBAGE KNAPPEN
+
         buttonTilbage.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -109,7 +114,7 @@ public class GUI extends Application {
                 Button buttonP = new Button("Patient");
                 Button buttonL = new Button("Læge");
                 Button buttonSP = new Button("Sundhedsprofessionel");
-                Button buttonTilbage = new Button("Tilbage");
+
                 GridPane pane = new GridPane();
 
                 pane.add(labelDiagnomonic, 0 ,0 );
@@ -127,7 +132,6 @@ public class GUI extends Application {
 
         // HER ER FORSIDEN
         GridPane pane = new GridPane();
-
         pane.add(labelDiagnomonic, 0 ,0 );
         pane.add(buttonP,3,13); //Row -> //column ^
         pane.add(buttonL, 1, 14);
