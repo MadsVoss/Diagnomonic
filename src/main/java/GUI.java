@@ -16,10 +16,10 @@ public class GUI extends Application {
     @Override
     public void start(final Stage stage) throws Exception {
         // DETTE ER TIL FORSIDEN
-        Label labelDiagnomonic = new Label("Diagnomonic");
-        Button buttonP = new Button("Patient");
-        Button buttonL = new Button("Læge");
-        Button buttonSP = new Button("Sundhedsprofessionel");
+        final Label labelDiagnomonic = new Label("Diagnomonic");
+        final Button buttonP = new Button("Patient");
+        final Button buttonL = new Button("Læge");
+        final Button buttonSP = new Button("Sundhedsprofessionel");
         final Button buttonTilbage = new Button("Tilbage");
 
         //DETTE ER TIL PATIENT KNAPPEN
@@ -27,7 +27,6 @@ public class GUI extends Application {
                 @Override
                 public void handle(ActionEvent event) {
 
-                    Label labelDiagnomonic = new Label("Diagnomonic");
                     Label labelCPR = new Label("CPR-nr:");
                     TextField textCPR = new TextField ();
                     Button button2 = new Button("Login");
@@ -51,7 +50,6 @@ public class GUI extends Application {
             @Override
             public void handle(ActionEvent event) {
 
-                Label labelDiagnomonic = new Label ("Diagnomonic");
                 Label labelBrugernavn = new Label("Brugernavn:");
                 TextField textBrugernavn = new TextField ();
                 Label labelPassword = new Label ("Password:");
@@ -81,7 +79,7 @@ public class GUI extends Application {
             @Override
             public void handle(ActionEvent event) {
 
-                Label labelDiagnomonic = new Label ("Diagnomonic");
+
                 Label labelBrugernavn = new Label("Brugernavn:");
                 TextField textBrugernavn = new TextField ();
                 Label labelPassword = new Label ("Password:");
@@ -110,10 +108,7 @@ public class GUI extends Application {
         buttonTilbage.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Label labelDiagnomonic = new Label("Diagnomonic");
-                Button buttonP = new Button("Patient");
-                Button buttonL = new Button("Læge");
-                Button buttonSP = new Button("Sundhedsprofessionel");
+
 
                 GridPane pane = new GridPane();
 
