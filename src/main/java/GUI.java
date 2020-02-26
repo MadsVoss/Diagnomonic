@@ -13,12 +13,13 @@ import javafx.stage.Stage;
 public class GUI extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(final Stage stage) throws Exception {
         // DETTE ER TIL FORSIDEN
         Label labelDiagnomonic = new Label("Diagnomonic");
         Button buttonP = new Button("Patient");
         Button buttonL = new Button("Læge");
         Button buttonSP = new Button("Sundhedsprofessionel");
+        final Button buttonTilbage = new Button("Tilbage");
 
         //DETTE ER TIL PATIENT KNAPPEN
         buttonP.setOnAction(new EventHandler<ActionEvent>() {
@@ -35,9 +36,10 @@ public class GUI extends Application {
                     pane2.add(labelCPR, 1, 1);
                     pane2.add(textCPR, 2, 1);
                     pane2.add(button2, 1 ,2 );
+                    pane2.add(buttonTilbage, 0, 1);
 
                     Scene scene2 = new Scene(pane2, 640, 480);
-                    stage2.setScene(scene2);
+                    stage2.setScene(scene);
                     stage2.show();
                 }
         });
@@ -62,6 +64,7 @@ public class GUI extends Application {
                 pane2.add(labelPassword, 1, 2);
                 pane2.add(textPassword, 2,2);
                 pane2.add(button2, 1 ,3 );
+                pane2.add(buttonTilbage, 0, 1);
                 //pane2.setGridLinesVisible(true);
 
                 Scene scene2 = new Scene(pane2, 640, 480);
@@ -89,6 +92,7 @@ public class GUI extends Application {
                 pane2.add(labelPassword, 1, 2);
                 pane2.add(textPassword, 2,2);
                 pane2.add(button2, 1 ,3 );
+                pane2.add(buttonTilbage, 0, 1);
                 //pane2.setGridLinesVisible(true);
 
                 Scene scene2 = new Scene(pane2, 640, 480);
@@ -97,6 +101,30 @@ public class GUI extends Application {
             }
         });
 
+        //DETTE ER TIL TILBAGE KNAPPEN
+        buttonTilbage.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Label labelDiagnomonic = new Label("Diagnomonic");
+                Button buttonP = new Button("Patient");
+                Button buttonL = new Button("Læge");
+                Button buttonSP = new Button("Sundhedsprofessionel");
+                Button buttonTilbage = new Button("Tilbage");
+                GridPane pane = new GridPane();
+
+                pane.add(labelDiagnomonic, 0 ,0 );
+                pane.add(buttonP,3,13); //Row -> //column ^
+                pane.add(buttonL, 1, 14);
+                pane.add(buttonSP,5, 14);
+
+                Scene scene = new Scene(pane, 640, 480);
+                stage.setScene(scene);
+                stage.show();
+
+            }
+        });
+
+
         // HER ER FORSIDEN
         GridPane pane = new GridPane();
 
@@ -104,6 +132,7 @@ public class GUI extends Application {
         pane.add(buttonP,3,13); //Row -> //column ^
         pane.add(buttonL, 1, 14);
         pane.add(buttonSP,5, 14);
+
 
         Scene scene = new Scene(pane, 640, 480);
         stage.setScene(scene);
