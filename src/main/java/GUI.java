@@ -12,11 +12,14 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
+
 public class GUI extends Application {
+
+    public static Stage stage;
 
     @Override
     public void start(final Stage stage) throws Exception {
-
+        GUI.stage = stage;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui.fxml"));
         GridPane gridPane = loader.load();
         Scene scene = new Scene(gridPane);

@@ -29,12 +29,12 @@
         <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
     </columnConstraints>
     <children>
-        <Button mnemonicParsing="false" text="Login" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-        <Label prefWidth="115.0" text="Diagnonomic" GridPane.columnIndex="3" />
+        <Button fx:id="loginLæge" mnemonicParsing="false" onAction="#loginLæge" text="Login" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+        <Label prefWidth="115.0" text="Diagnonomic" GridPane.columnIndex="3" GridPane.rowIndex="1" />
         <Label text="Brugernavn" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-        <PasswordField GridPane.columnIndex="2" GridPane.rowIndex="4" />
       <Label text="Password" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <PasswordField GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <PasswordField fx:id="lægePassword" GridPane.columnIndex="2" GridPane.rowIndex="5" />
         <Button mnemonicParsing="false" onAction="#tilbageVindue" text="Tilbage" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <TextField fx:id="lægeBrugernavn" GridPane.columnIndex="2" GridPane.rowIndex="4" />
     </children>
 </GridPane>
