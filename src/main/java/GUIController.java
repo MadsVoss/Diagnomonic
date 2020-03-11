@@ -19,6 +19,7 @@ public class GUIController {
     public TextField brugernavnSP;
 
 
+
     public void patientVindue(ActionEvent actionEvent) throws IOException {
            FXMLLoader loader = new FXMLLoader(getClass().getResource("/patientGUI.fxml"));
            GridPane gridPane = loader.load();
@@ -102,7 +103,19 @@ public class GUIController {
             }
         }
     }
-}
+
+    public void visTemperatur(ActionEvent actionEvent) throws InterruptedException {
+        double random = Math.random();
+        double temperatur = 36.0;
+        //while(true) {
+          //  Thread.sleep(1000);
+            if(random < 1.5 ) {
+                System.out.println("Patientens temperatur er: " + String.format("%.1f", temperatur + random) + "°C");
+            }
+        }
+
+    }
+
 
 
 
